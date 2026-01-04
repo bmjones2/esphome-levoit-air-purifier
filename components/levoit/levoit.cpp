@@ -444,7 +444,7 @@ void Levoit::handle_payload_(LevoitPayloadType type, uint8_t *payload, size_t le
       bool display = payload[displayIndex] != 0x00;
       bool displayLock = payload[device_model_ == LevoitDeviceModel::CORE_200S ? 11 : 14] != 0x00;
 
-      uint8_t fanSpeedIndex = 9;
+      uint8_t fanSpeedIndex = 6;
       switch (device_model_) {
         case LevoitDeviceModel::CORE_400S: fanSpeedIndex = 7; break;
         case LevoitDeviceModel::CORE_200S: fanSpeedIndex = 6; break;
